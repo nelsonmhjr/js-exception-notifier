@@ -3,6 +3,7 @@ class JsExceptionNotifierController < ApplicationController
   THROTTLE_DURATION = 240.0 * 60.0   # per 240*60 sec = 4 hour. Keep these values as floats.
 
   before_filter :enforce_rate_limit
+  skip_before_filter :verify_authenticity_token
 
   class JSException < StandardError
     attr_reader :message
