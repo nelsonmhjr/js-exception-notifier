@@ -1,7 +1,7 @@
 # Excludes JS files from services which generates exceptions we can't help
 
 isExcludedContext = (context)->
-  excludedContext = []
+  excludedContext = window.js_exception_notifier_excluded_context || []
   excludedContext.push('NREUMQ')
 
   $.each excludedContext, (index, value) ->
@@ -11,7 +11,7 @@ isExcludedContext = (context)->
   false
 
 isExcludedFile = (filename)->
-  excludedServices = []
+  excludedServices = window.js_exception_notifier_excluded_services || []
   excludedServices.push('newrelic', 'livechatinc', 'selenium-ide', 'firebug', 'tracekit', 'amberjack', 'googleapis')
 
   $.each excludedServices, (index, value) ->
