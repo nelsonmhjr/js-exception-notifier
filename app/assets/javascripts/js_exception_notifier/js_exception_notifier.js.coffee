@@ -43,3 +43,4 @@ TraceKit.report.subscribe JSExceptionNotifierLogger = (errorReport) ->
 
 # Wraps your code on document.ready
 $.fn.ready = TraceKit.wrap($.fn.ready)
+$.fn.trigger = TraceKit.wrap($.fn.trigger)
