@@ -31,14 +31,12 @@ User this two vars to avoid reporting error by context or services.
 
 Context are lines around error.
 Services are url from the filename.
-Both are evaluated using [JS String.prototype.match](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match)
+Both are evaluated using {JS String.prototype.match}[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/match]
 
-```html
-<script>
-  window.js_exception_notifier_excluded_context = ['NREUM'] # Context is lines around source where error occured
-  window.js_exception_notifier_excluded_services = ['facebook'] # Services are the url from the filename
-</script>
-```
+  <script>
+    window.js_exception_notifier_excluded_context = ['NREUM'] # Context is lines around source where error occured
+    window.js_exception_notifier_excluded_services = ['facebook'] # Services are the url from the filename
+  </script>
 
 
 == JsExceptionNotifier comes with a dummy app:
